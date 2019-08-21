@@ -12,7 +12,7 @@ config.module.rules.push(
                 loader: 'url-loader',
                 options: {
                     name: "img/[name].[ext]",
-                    limit: 1
+                    limit: 5000
                 }
             },
             {

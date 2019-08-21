@@ -121,7 +121,7 @@ module.exports = {
     },
     plugins: [
         new webpack.BannerPlugin('点评平台研发中心-图片压缩方案测试'),
-        new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: ['dist'] }),//每次打包清理上次的打包文件
+        new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: ['/dist'] }),//每次打包清理上次的打包文件
         // css文件抽离设置
         new MiniCssExtractPlugin({
             filename: 'css/[name].css'

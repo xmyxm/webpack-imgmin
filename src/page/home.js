@@ -50,7 +50,7 @@ export default class Home extends Component {
                     </div>
                     <div className="info">
                         分别测试 image-webpack-loader 和 imagemin-webpack-plugin 两类工具的压缩效果，
-                        <a className="taplink" href="https://km.sankuai.com/page/189360715" target="_blank">点击查看对比文档</a>。
+                        <a className="taplink" href="#" target="_blank">稍后提供文档文档</a>。
                     </div>
                 </div>
             </React.Fragment>
