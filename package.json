@@ -1,0 +1,59 @@
+{
+  "name": "webpack-imgmin",
+  "version": "0.0.1",
+  "description": "xmyxm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config ./webpack/webpack.loader.config.js",
+    "build:plugin": "webpack --config ./webpack/webpack.plugin.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xmyxm/webpack-imgmin.git"
+  },
+  "keywords": [
+    "imgmin"
+  ],
+  "author": "xmyxm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xmyxm/webpack-imgmin/issues"
+  },
+  "homepage": "https://github.com/xmyxm/webpack-imgmin#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.5.5",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "core-js": "^3.1.4",
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^5.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "postcss-loader": "^3.0.0",
+    "react-dom": "^16.8.6",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dashboard": "^3.0.7",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "open": "^6.4.0",
+    "react": "^16.8.6",
+    "vconsole": "^3.3.2",
+    "whatwg-fetch": "^3.0.0"
+  }
+}

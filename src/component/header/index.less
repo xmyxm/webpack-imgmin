@@ -1,0 +1,38 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 44px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    // border-bottom: 1px solid #e1e1e1;
+
+    .back, .next, .next-page {
+        height: 34px;
+        width: 50px;
+        cursor: pointer;
+    }
+
+    .back {
+        background: url(//s1.51ping.com/app/node-content-web/client/media/author-back.c4e9f422.png) left center no-repeat;
+        background-size: 24px 24px;
+    }
+
+    .next-page {
+        background: url(//p0.meituan.net/scarlett/fb596aec2243ee8580e9d61ba26d4ee0580.png) right center no-repeat;
+        background-size: 24px 24px;
+    }
+
+    .title {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+.headerbox {
+    height: 44px;
+}

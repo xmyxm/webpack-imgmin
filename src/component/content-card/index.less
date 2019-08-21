@@ -1,0 +1,175 @@
+.guidecard {
+    margin: 10px 15px;
+    padding: 10px 15px;
+    height: 95px;
+    position: relative;
+    border-radius: 7px;
+
+    .contentcenter,
+    .contentaround {
+        margin-right: 100px;
+        padding-right: 10px;
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contentcenter {
+        justify-content: center;
+    }
+
+    .contentaround {
+        justify-content: space-around;
+    }
+
+    .imgbox {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 115px;
+        height: 115px;
+        background-size: cover;
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOYAAADmBAMAAAAzROSIAAAAD1BMVEX///////////////////+Rd1MVAAAABXRSTlMzRzhAPNdHI8kAAAIYSURBVHja7dphbsIwDAVgJ80B5sEBWuAABHGAhd7/ThMbVilpOk3aM0x638/9sV7iOOk2ISIiIiIiIiIiIiIiIiIiIno9h6ybi7gqerUVR3v9dhI3UU0vXgY174JnMd2Ddjo5io+ik61lH7GJ9d6touqHAEU1tqEjfJWTTr7iFfzOdnrvaDXfBCjojZUaWPM/13TsofZZyfCzUs8E/OStZ58FRon1jE/YWy2O2ld3WbDAEPtrkerOHvRqIwiHbEdi/jbJwDdgtjzzN1i06gjFyszfmkGBIyHcAk31zxYfdlSsXeffDsl+ChEXn3rFzilGriJZTNyED/XjPWbFTr6kN6f6qSso+bFowX+3BDXb3gYT/FLRho3gFK3A7+vkHrMO2jyc+KC9QA265AytGnXZRYCSLjsJUKfL3gVo7520vbzo3yiMnqPB5NfZUuTqqn/vBjV+UzCre9DurlUv/W43OgQtj2MgFvS1FhfatIDPaJhSTgp2cctSv8SMXNy4nCgp8MOls0CN+AIwNJolAd+duXX6M24sNPuzg21oap7DCNvQ0D4SBXVCh/ZNGVBNVNoLmFBTIa80Cqpx17JkzJiPa3s2YBo3WQu1e/oEqtk3R/FZ/ly3tnzJPgoda0ovCOHn1mRN1lzVPa2mih/4H6rW5y1efa94svvTU35OTff/BBvsUnYUzkJERERERERERERERERERET0a5/vYHJzD2gk/QAAAABJRU5ErkJggg==);
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+        overflow: hidden;
+    }
+
+    .imgfile {
+        display: block;
+        width: auto;
+        height: 100%;
+        border-top-right-radius: 0.7rem;
+        border-bottom-right-radius: 0.7rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .title {
+        line-height: 22px;
+        min-height: 22px;
+        font-size: 16px;
+        color: #ffffff;
+        font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .moreshop {
+        font-size: 13px;
+        margin-top: 3px;
+        line-height: 15px;
+        align-items: center;
+    }
+
+    .moreshop,
+    .baseinfo {
+        white-space: nowrap;
+        color: #ffffff;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .shopicon {
+        margin-right: 3px;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        background: url(https://p0.meituan.net/dpgroup/cde49079008f40c7b874c6014fe0a31c432.png)
+            center no-repeat;
+        background-size: 12px 12px;
+        flex-shrink: 0;
+    }
+
+    .shoptext,
+    .shopmoretext {
+        opacity: 0.7;
+    }
+
+    .shoptext {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+
+    .stj {
+        padding-right: 16px;
+    }
+
+    .shopmoretext {
+        flex-shrink: 0;
+        position: relative;
+        padding: 1px 0;
+    }
+
+    .smtj {
+        left: -16px;
+    }
+
+    .icon {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .user {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    .level {
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        right: -1px;
+        bottom: -1px;
+    }
+
+    .baseinfo {
+        margin-top: 10px;
+    }
+
+    .userinfo {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: 10px;
+        margin-left: 5px;
+        flex: 1;
+        flex-shrink: 1;
+    }
+
+    .name,
+    .viewcount,
+    .likecount {
+        height: 20px;
+        line-height: 20px;
+        opacity: 0.7;
+        white-space: nowrap;
+        font-size: 12px;
+        color: #ffffff;
+    }
+
+    .viewcount {
+        margin-right: 10px;
+        flex: none;
+    }
+
+    .likecount {
+        flex: none;
+    }
+}
