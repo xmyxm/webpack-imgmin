@@ -1,8 +1,8 @@
 const WebpackDevServer = require('webpack-dev-server');
 const webpack = require('webpack');
 const open = require('open');
-// const config = require('./webpack/webpack.loader.config');
-const config = require('./webpack/webpack.plugin.config');
+const config = require('./webpack/webpack.loader.config');
+// const config = require('./webpack/webpack.plugin.config');
 const port =  config.devServer.port;
 const host = config.devServer.host || '127.0.0.1';
 

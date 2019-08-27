@@ -15,8 +15,7 @@ config.module.rules.push(
                 options: {
                     name: "[name].[ext]",
                     publicPath: "../img/",
-                    outputPath: "img/",
-                    limit: 1
+                    outputPath: "img/"
                 }
             }
         ]

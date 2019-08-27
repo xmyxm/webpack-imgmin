@@ -14,7 +14,7 @@
 ```
 2、打包构建
 ```bash
-    yarn build  // 采用 image-webpack-loader 方案来打包
+    yarn build:loader // 采用 image-webpack-loader 方案来打包
     yarn build:plugin // 采用 imagemin-webpack-plugin 方案来打包
 ```
 

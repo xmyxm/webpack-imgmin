@@ -14,7 +14,7 @@ config.module.rules.push(
                     name: "[name].[ext]",
                     publicPath: "../img/",
                     outputPath: "img/",
-                    limit: 5000
+                    limit: 1000
                 }
             },
             {
