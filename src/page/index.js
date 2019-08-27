@@ -24,8 +24,9 @@ export default class Index extends Component {
             <React.Fragment>
                 <Header title="图片压缩测试"></Header>
                 <div className="index-page">
-                    <div className="title">图片分别以背景和Img标签的方式引入</div>
-                    <div className="icon-type">background</div>
+                    <div className="icon-max"></div>
+                    <div className="describe">基于image-webpack-loader和imagemin-webpack-plugin压缩测试</div>
+                    <div className="icon-type">background引入图片</div>
                     <div className="bkg-box">
                         {
                             iconList.map(classText => {
@@ -33,7 +34,7 @@ export default class Index extends Component {
                             })
                         }
                     </div>
-                    <div className="icon-type">Img</div>
+                    <div className="icon-type">Img引入图片</div>
                     <div className="img-box">
                         <img className="icon-img" src={mb_url} />
                         <img className="icon-img" src={nyg_url} />
@@ -44,8 +45,7 @@ export default class Index extends Component {
                         <img className="icon-img" src={yg_url} />
                     </div>
                     <div className="info">
-                        分别测试 image-webpack-loader 和 imagemin-webpack-plugin 两类工具的压缩效果，
-                        <a className="taplink" href="#" target="_blank">稍后提供文档文档</a>。
+                        1. 分别测试 image-webpack-loader 和 imagemin-webpack-plugin 两类工具的压缩效果，
                     </div>
                 </div>
             </React.Fragment>

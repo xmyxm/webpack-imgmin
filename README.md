@@ -42,7 +42,7 @@ image-webpack-loader 基于webpack的图片压缩工具，压缩方案采用 ima
 
 imagemin-webpack-plugin 同上，写法和用法略有不同，github start 561
 
-对比：相比较两者实现的处理流程不同，loader的方式是先找到图片压缩后再交给file-loader处理，plugin是在生成资源到 output 目录之前再来压缩，如果要结合雪碧图的插件建议用后者，如果是普通使用或结合图片base64使用建议用前者
+对比：相比较两者实现的处理流程不同，loader的方式是先找到图片压缩后再交给url-loader处理，plugin是在生成资源到 output 目录之前再来压缩，如果想图片base64或使用雪碧图插件可以用前者，后者的运用场景也能做雪碧图的压缩方案
 
 三. gulp图片压缩plugin
 
