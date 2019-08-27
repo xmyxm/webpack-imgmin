@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config ./webpack/webpack.loader.config.js",
+    "start": "node app.js",
+    "build:loader": "webpack --config ./webpack/webpack.loader.config.js",
     "build:plugin": "webpack --config ./webpack/webpack.plugin.config.js"
   },
   "repository": {
@@ -47,13 +48,10 @@
     "url-loader": "^2.1.0",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
-    "webpack-dashboard": "^3.0.7",
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
     "open": "^6.4.0",
-    "react": "^16.8.6",
-    "vconsole": "^3.3.2",
-    "whatwg-fetch": "^3.0.0"
+    "react": "^16.8.6"
   }
 }

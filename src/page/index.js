@@ -1,45 +1,56 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
 import ReactDOM from 'react-dom';
 import Header from "../component/header/index"
-import "../style/index.less"
+import "../style/index.less";
+import mb_url from "../icon/mb.png"
+import nyg_url from "../icon/nyg.png"
+import ps_url from "../icon/ps.png"
+import rg_url from "../icon/rg.png"
+import ss_url from "../icon/ss.png"
+import ttq_url from "../icon/ttq.png"
+import yg_url from "../icon/yg.png"
 
-class Index extends Component {
-    constructor(options) {
-        super(options)
+export default class Index extends Component {
+    constructor(props) {
+        super(props);
         this.state = {
-            pageAry: [
-                { name: "List", url: "./list.html" },
-                { name: "雪碧图", url: "./detail.html" },
-                { name: "图片压缩", url: "./home.html" }
-            ]
+            iconList: ["icon-bb", "icon-bgg", "icon-bg", "icon-bd", "icon-cm", "icon-dg", "icon-dhs", "icon-kxg", "icon-mkl"]
         }
     }
 
-    clickPage(pageInfo) {
-        window.location.href = pageInfo.url
-    }
-
     render() {
-        const { pageAry } = this.state
+        const { iconList } = this.state
         return (
             <React.Fragment>
-                <Header></Header>
-                <div className="indexbox">
-                    <div className="icon"></div>
-                    <div className="describe">webpack图片打包方案测试平台</div>
-                    <div className="cs">测试案例 :</div>
-                    <div className="pagelist">
+                <Header title="图片压缩测试"></Header>
+                <div className="index-page">
+                    <div className="title">图片分别以背景和Img标签的方式引入</div>
+                    <div className="icon-type">background</div>
+                    <div className="bkg-box">
                         {
-                            pageAry.map(pageInfo => {
-                                return <div key={pageInfo.name} onClick={this.clickPage.bind(this, pageInfo)} className="item">{pageInfo.name}<div className="arrow"></div> </div>   
+                            iconList.map(classText => {
+                                return <div key={classText} className={`${classText} icon`}></div>
                             })
                         }
                     </div>
+                    <div className="icon-type">Img</div>
+                    <div className="img-box">
+                        <img className="icon-img" src={mb_url} />
+                        <img className="icon-img" src={nyg_url} />
+                        <img className="icon-img" src={ps_url} />
+                        <img className="icon-img" src={rg_url} />
+                        <img className="icon-img" src={ss_url} />
+                        <img className="icon-img" src={ttq_url} />
+                        <img className="icon-img" src={yg_url} />
+                    </div>
+                    <div className="info">
+                        分别测试 image-webpack-loader 和 imagemin-webpack-plugin 两类工具的压缩效果，
+                        <a className="taplink" href="#" target="_blank">稍后提供文档文档</a>。
+                    </div>
                 </div>
             </React.Fragment>
-        )
+        );
     }
 }
 
 ReactDOM.render(<Index></Index>, document.querySelector("#main"))
-console.log("欢迎来到图片测试平台！")

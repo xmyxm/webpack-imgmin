@@ -1,44 +1,79 @@
 @import "./reset.less";
 
-.indexbox {
-    .icon {
-        height: 120px;
-        background: url("../icon/index/图片.png") center no-repeat;
-        background-size: 60px 60px;
-    }
+.index-page {
+  padding: 10px;
 
-    .describe {
-        text-indent: 2em;
-        padding: 0 70px;
-        line-height: 18px;
-        font-size: 14px;
-    }
+  .title {
+    padding-top: 15px;
+    font-size: 16px;
+    padding-bottom: 25px;
+  }
 
-    .cs {
-        font-size: 14px;
-        font-weight: bold;
-        padding: 30px 70px 0;
-    }
-    
-    .pagelist {
-        padding: 15px 70px;
-    
-        .item {
-            line-height: 48px;
-            padding-left: 10px;
-            border-bottom: 1px solid #e1e1e1;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+  .icon-type {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 10px;
+  }
 
-        .arrow {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            background: url("../icon/right.png") center no-repeat;
-            background-size: 20px 20px; 
-        }
-    }
+  .bkg-box,
+  .img-box {
+    padding: 10px;
+  }
+
+  .icon-bb {
+    background: url("../icon/bb.png") center no-repeat;
+  }
+
+  .icon-bgg {
+    background: url("../icon/bgg.png") center no-repeat;
+  }
+
+  .icon-bg {
+    background: url("../icon/bg.png") center no-repeat;
+  }
+  .icon-bd {
+    background: url("../icon/bd.png") center no-repeat;
+  }
+  .icon-cm {
+    background: url("../icon/cm.png") center no-repeat;
+  }
+  .icon-dg {
+    background: url("../icon/dg.png") center no-repeat;
+  }
+  .icon-dhs {
+    background: url("../icon/dhs.png") center no-repeat;
+  }
+  .icon-kxg {
+    background: url("../icon/kxg.png") center no-repeat;
+  }
+  .icon-mkl {
+    background: url("../icon/mkl.png") center no-repeat;
+  }
+
+  .icon-img {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+  }
+
+  .info {
+    color: #a0a0a0;
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  .taplink {
+    color: #0094ff;
+    text-decoration: none;
+  }
 }
-

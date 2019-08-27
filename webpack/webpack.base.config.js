@@ -6,17 +6,13 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');//webpack插件，用于清除目录文件
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const DashboardPlugin = require('webpack-dashboard/plugin');
 const packageFilePath = path.join(__dirname, '../dist');
-const DEV_MODE = "development"
+// const DEV_MODE = "development"
+const DEV_MODE = "production"
 
 module.exports = {
-    mode: "development",
     entry: {
-        index: ['./src/page/index.js'],
-        detail: ['./src/page/detail.js'],
-        home: ['./src/page/home.js'],
-        list: ['./src/page/list.js']
+        index: ['./src/page/index.js']
     },
     output: {
         path: packageFilePath,
@@ -39,8 +35,7 @@ module.exports = {
             // manifest文件用来引导所有模块的交互。manifest文件包含了加载和处理模块的逻辑。
             // 当webpack编译器处理和映射应用代码时，它把模块的详细的信息都记录到了manifest文件中。当模块被打包并运输到浏览器上时，
             name: 'manifest'
-        },
-        nodeEnv: 'production' // 取代webpack3使用的 DefinePlugin
+        }
     },
     module: {
         rules: [{
@@ -97,7 +92,7 @@ module.exports = {
             test: /\.less$/,
             use: [
                 {
-                    loader: DEV_MODE ? 'style-loader' : MiniCssExtractPlugin.loader,
+                    loader: DEV_MODE === "development" ? 'style-loader' : MiniCssExtractPlugin.loader,
                     options: {
                         // 您可以在这里指定公共路径,默认情况下，它在webpackOptions.output中使用publicPath
                     }
@@ -121,51 +116,17 @@ module.exports = {
     },
     plugins: [
         new webpack.BannerPlugin('点评平台研发中心-图片压缩方案测试'),
-        new CleanWebpackPlugin({ cleanOnceBeforeBuildPatterns: ['/dist'] }),//每次打包清理上次的打包文件
+        // new CleanWebpackPlugin(),// 默认删除webpack output.path目录中的所有文件
         // css文件抽离设置
         new MiniCssExtractPlugin({
             filename: 'css/[name].css'
         }),
-        new DashboardPlugin(),
         new HtmlWebpackPlugin({
             template: './src/html/index.html'
             , filename: 'index.html'//可以使用hash命名
             , title: 'index'
             , inject: 'body'//脚本包含到body 也可以写到head里面
             , chunks: ['manifest', 'commons', 'index']//指定当前模板需要打入哪些js模块
-            , minify: {//启用代码代码压缩
-                removeComments: false,//移除注释
-                collapseWhitespace: false//移除空格
-            }
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/html/detail.html'
-            , filename: 'detail.html'//可以使用hash命名
-            , title: 'detail'
-            , inject: 'body'//脚本包含到body 也可以写到head里面
-            , chunks: ['manifest', 'commons', 'detail']//指定当前模板需要打入哪些js模块
-            , minify: {//启用代码代码压缩
-                removeComments: false,//移除注释
-                collapseWhitespace: false//移除空格
-            }
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/html/list.html'
-            , filename: 'list.html'//可以使用hash命名
-            , title: 'list'
-            , inject: 'body'//脚本包含到body 也可以写到head里面
-            , chunks: ['manifest', 'commons', 'list']//指定当前模板需要打入哪些js模块
-            , minify: {//启用代码代码压缩
-                removeComments: false,//移除注释
-                collapseWhitespace: false//移除空格
-            }
-        }),
-        new HtmlWebpackPlugin({
-            template: './src/html/home.html'
-            , filename: 'home.html'//可以使用hash命名
-            , title: 'home'
-            , inject: 'body'//脚本包含到body 也可以写到head里面
-            , chunks: ['manifest', 'commons', 'home']//指定当前模板需要打入哪些js模块
             , minify: {//启用代码代码压缩
                 removeComments: false,//移除注释
                 collapseWhitespace: false//移除空格

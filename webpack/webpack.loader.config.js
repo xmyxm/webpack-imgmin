@@ -2,7 +2,7 @@
 
 
 
-let config = require('./webpack.base.config.js');
+const config = require('./webpack.base.config.js');
 
 config.module.rules.push(
     {
@@ -11,14 +11,16 @@ config.module.rules.push(
             {
                 loader: 'url-loader',
                 options: {
-                    name: "img/[name].[ext]",
+                    name: "[name].[ext]",
+                    publicPath: "../img/",
+                    outputPath: "img/",
                     limit: 5000
                 }
             },
             {
                 loader: 'image-webpack-loader',
                 options: {
-                    disable: process.env.NODE_ENV === 'production'
+                    disable: false// process.env.NODE_ENV === 'production'
                 }
             }
         ]

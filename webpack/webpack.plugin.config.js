@@ -3,17 +3,19 @@
 
 
 
-let config = require('./webpack.base.config.js');
-let ImageminPlugin = require('imagemin-webpack-plugin').default
+const config = require('./webpack.base.config.js');
+const ImageminPlugin = require('imagemin-webpack-plugin').default
 
 config.module.rules.push(
     {
         test: /\.(jpe?g|png|gif|svg)$/i,
         use: [
             {
-                loader: 'url-loader',
+                loader: 'file-loader',
                 options: {
-                    name: "img/[name].[ext]",
+                    name: "[name].[ext]",
+                    publicPath: "../img/",
+                    outputPath: "img/",
                     limit: 1
                 }
             }
@@ -23,7 +25,7 @@ config.module.rules.push(
 
 config.plugins.push(
     new ImageminPlugin({
-        disable: process.env.NODE_ENV === 'production', // Disable during development
+        disable: false, // process.env.NODE_ENV === 'production', // Disable during development
         pngquant: {
           quality: '75'
         }
