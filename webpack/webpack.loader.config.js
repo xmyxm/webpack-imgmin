@@ -20,7 +20,24 @@ config.module.rules.push(
             {
                 loader: 'image-webpack-loader',
                 options: {
-                    disable: false// process.env.NODE_ENV === 'production'
+                    disable: false, // process.env.NODE_ENV === 'production'
+                    mozjpeg: {
+                        progressive: true,
+                        quality: 75
+                    },
+                    optipng: {
+                        enabled: false, // 禁用optipng
+                    },
+                    pngquant: {
+                        quality: '75-90',
+                        speed: 4
+                    },
+                    gifsicle: {
+                        interlaced: false,
+                    }
+                    // webp: { // webp选项将启用webp
+                    //     quality: 75
+                    // }
                 }
             }
         ]
